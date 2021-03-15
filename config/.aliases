@@ -1,0 +1,18 @@
+# Setup python
+
+alias python=/usr/local/bin/python3
+alias pip=pip3
+
+# Matrix homeserver
+
+# https://github.com/spantaleev/matrix-docker-ansible-deploy
+# Common tags:
+# - setup-all
+# - start
+# - stop
+#
+# matrix-ansible setup-all,start
+matrix-ansible() {
+  homeserver-setup=ansible-playbook -i inventory/hosts setup.yml --tags=$1
+}
+
