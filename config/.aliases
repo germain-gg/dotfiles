@@ -12,7 +12,10 @@ alias pip=pip3
 # - stop
 #
 # matrix-ansible setup-all,start
-matrix-ansible() {
-  homeserver-setup=ansible-playbook -i inventory/hosts setup.yml --tags=$1
+function matrix-ansible() {
+  # local current_folder= "$(pwd)";
+  # echo "$current_folder";
+  cd $WORKSPACE/matrix-docker-ansible-deploy;
+  ansible-playbook -i inventory/hosts setup.yml --tags="$1";
+  # cd $current_folder;
 }
-

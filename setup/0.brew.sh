@@ -29,8 +29,8 @@ brew install --cask diffmerge
 ## 🛠 Utility
 ##
 
-pip install ansible
-pip install passlib
+pip3 install ansible
+pip3 install passlib
 
 brew install --cask disk-inventory-x
 brew install --cask tunnelblick

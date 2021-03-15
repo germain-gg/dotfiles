@@ -15,8 +15,11 @@
   changed = blue
   untracked = magenta
   deleted = red
+[alias]
+  nvm = "git reset --soft HEAD~1"
+  l = "log"
 [format]
-  pretty = "Commit:  %C(yellow)%H%nAuthor:  %C(green)%aN <%aE>%nDate:    (%C(red)%ar%Creset) %ai%nSubject: %s%n%n%b"
+  pretty = "Commit:  %C(yellow)%H%nAuthor:  %C(green)%aN <%aE>%nDate:    (%C(cyan)%ar%Creset) %ai%nSubject: %s%n%n%b"
   name = Germain Souquet
 [diff]
 	tool = diffmerge
