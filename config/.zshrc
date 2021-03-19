@@ -31,5 +31,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # ~Zsh syntax highlighting
 
-source $HOME/config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

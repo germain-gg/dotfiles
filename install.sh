@@ -9,7 +9,8 @@ else
   NAME=$(bash -c 'read -e -p "📝 Enter your full name: " tmp; echo $tmp')
   EMAIL=$(bash -c 'read -e -p "📝 Enter your email: " tmp; echo $tmp')
 
-  echo "export NAME=$NAME
+  echo "#!/usr/bin/env zsh
+  export NAME=$NAME
   export EMAIL=$EMAIL" >> ./config/.extra
 
   echo "[user]

@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Setup python
 
 alias python=/usr/local/bin/python3
@@ -13,9 +15,6 @@ alias pip=pip3
 #
 # matrix-ansible setup-all,start
 function matrix-ansible() {
-  # local current_folder= "$(pwd)";
-  # echo "$current_folder";
   cd $WORKSPACE/matrix-docker-ansible-deploy;
   ansible-playbook -i inventory/hosts setup.yml --tags="$1";
-  # cd $current_folder;
 }
