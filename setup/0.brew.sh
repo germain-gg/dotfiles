@@ -8,6 +8,9 @@ fi
 brew tap homebrew/cask
 brew tap homebrew/cask-versions
 
+# https://github.com/zsh-users/zsh-completions/issues/433
+chmod -R go-w "$(brew --prefix)/share"
+
 ##
 ## 🤓 Developer tools
 ##
@@ -35,6 +38,8 @@ pip3 install passlib
 brew install --cask disk-inventory-x
 brew install --cask tunnelblick
 
+brew install --cask beardedspice
+
 ##
 ## 🌐 Web browsers
 ##
@@ -49,6 +54,8 @@ brew install --cask chromium
 brew install --cask microsoft-edge
 
 brew install --cask opera
+
+brew install --cask safari-technology-preview
 
 ##
 ## 🎥 Media & Entertainment
