@@ -20,15 +20,18 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
-
-# NVM setup
-# https://github.com/nvm-sh/nvm#installing-and-updating
-# that line also exists in ./setup/node.sh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
+source $HOME/.cargo/env
+source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 # ~Zsh syntax highlighting
 
 source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+export PATH="$HOME/.poetry/bin:$PATH"
+
+# Deno Version Manager
+export DVM_DIR="$HOME/.dvm"
+export PATH="$PATH:$DVM_BIN"
+[ -f "$DVM_DIR/dvm.sh" ] && . "$DVM_DIR/dvm.sh"
+[ -f "$DVM_DIR/bash_completion" ] && . "$DVM_DIR/bash_completion"
+

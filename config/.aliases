@@ -16,5 +16,6 @@ alias pip=pip3
 # matrix-ansible setup-all,start
 function matrix-ansible() {
   cd $WORKSPACE/matrix-docker-ansible-deploy;
+  git pull
   ansible-playbook -i inventory/hosts setup.yml --tags="$1";
 }

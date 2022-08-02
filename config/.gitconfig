@@ -36,3 +36,14 @@
 [mergetool "diffmerge"]
 	trustExitCode = true
 	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = Germain Souquet
+	email = germain@souquet.com
+
+[includeIf "gitdir:~/dev/element/"]
+  path = ~/.gitconfig_element

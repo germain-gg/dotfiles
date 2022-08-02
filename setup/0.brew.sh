@@ -39,6 +39,7 @@ brew install --cask disk-inventory-x
 brew install --cask tunnelblick
 
 brew install --cask beardedspice
+brew install --cask rectangle
 
 ##
 ## 🌐 Web browsers
